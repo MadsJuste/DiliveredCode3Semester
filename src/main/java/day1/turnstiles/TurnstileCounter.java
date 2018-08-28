@@ -1,6 +1,6 @@
 package day1.turnstiles;
 
-public class TurnstileCounter {
+public class   TurnstileCounter {
 
   static final long DELAY_VAL = 10000;
   long count = 0;
@@ -9,7 +9,7 @@ public class TurnstileCounter {
     return count;
   }
 
-  public void incr() {
+  public  synchronized void  incr() {
 //   If the program initially does "never" fail, replace the count line with the lines below
 //    long n = count;
 //    //Spend some time to force preemtion

@@ -8,21 +8,18 @@ public class Tester {
   
   public static void main(String[] args) throws InterruptedException {
     System.out.println("Available Processors: " + Runtime.getRuntime().availableProcessors());
-   //  long start = System.nanoTime(); 
+    long start = System.nanoTime(); 
     TagCounter tc1 = new TagCounter("http://www.fck.dk");
-   // tc1.start();
+    tc1.start();
     TagCounter tc2= new TagCounter("http://www.google.com");
-   // tc2.start();
+    tc2.start();
     TagCounter tc3= new TagCounter("http://politiken.dk/");
-   // tc3.start();
+    tc3.start();
    
-  //  Thread.sleep(5000);
-   long start = System.nanoTime();
-tc1.run();
-tc2.run();
-tc3.run(); 
-long end = System.nanoTime();
-System.out.println("Time Sequential: "+(end-start));
+    Thread.sleep(5000);
+
+ 
+
 
     System.out.println("Title: "+tc1.getTitle());
     System.out.println("Div's: "+tc1.getDivCount());
@@ -38,8 +35,8 @@ System.out.println("Time Sequential: "+(end-start));
     System.out.println("Body's: "+tc3.getBodyCount());  
     
     
-   //  long end = System.nanoTime();
-   // System.out.println("Time Sequential: "+(end-start));
+    long end = System.nanoTime();
+    System.out.println("Time Sequential: "+(end-start));
 
   }
 }

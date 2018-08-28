@@ -5,7 +5,11 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 public class Tester {
-
+/*
+    a) fik 35413 i stedet for 40000
+    b) problemet er et race issue, de forskellige turnstils interleaver og roder derfor processen.
+    c) problemet kan løses ved at synchronize incr() metoden in TurestileCounter classen.
+    */
   static final int NUMBER_OF_TURNSTILES = 40;
   static Turnstile[] turnStiles = new Turnstile[NUMBER_OF_TURNSTILES];
 
